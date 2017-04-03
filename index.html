@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- Credits
+For zodiac constellations:
+Aquarius by Meaghan Hendricks from the Noun Project
+Capricorn by Meaghan Hendricks from the Noun Project
+Scorpio by Meaghan Hendricks from the Noun Project
+Virgo by Meaghan Hendricks from the Noun Project
+Gemini by Meaghan Hendricks from the Noun Project
+Aries by Meaghan Hendricks from the Noun Project
+Libra by Meaghan Hendricks from the Noun Project
+Sagittarius by Meaghan Hendricks from the Noun Project
+Leo by Meaghan Hendricks from the Noun Project
+cancer by Meaghan Hendricks from the Noun Project
+Taurus by Meaghan Hendricks from the Noun Project
+Pisces by Meaghan Hendricks from the Noun Project
+For zodiac symbols
+Capricorn by Tatiana from the Noun Project
+Taurus by Tatiana from the Noun Project
+Virgo by Tatiana from the Noun Project
+Gemini by Tatiana from the Noun Project
+cancer by Tatiana from the Noun Project
+Aries by Tatiana from the Noun Project
+Pisces by Tatiana from the Noun Project
+Leo by Tatiana from the Noun Project
+Sagittarius by Tatiana from the Noun Project
+Scorpio by Tatiana from the Noun Project
+Libra by Tatiana from the Noun Project
+Aquarius by Tatiana from the Noun Project
+ -->
+<html>
+<head>
+		<!-- <link rel="stylesheet" href="css/datepicker.css"> -->
+		<!-- BOOTSTRAP Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- BOOTSTRAP Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Bad+Script|Quicksand" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://use.fontawesome.com/06591f047d.js"></script>
+</head>
+<body onload="start()" onresize="resize()" onorientationchange="resize()">
+	<canvas id="starfield"></canvas>
+	<!-- <p>When is your birthday?<input type="text" class="DateTextBox NoYear" id="datepicker"></p> -->
+	<div>
+		<p class="col-sm-12 text-center">
+			When is your birthday?
+		</p>
+		<!-- <input type="text" placeholder="Month" id="bdMonth"/>
+		<input type="text" placeholder="Day" id="bdDay" /> -->
+		<div class="choice">
+		<select id="bdMonth" class="selectpicker col-xs-2 col-xs-offset-4">
+			<option value="">&#45;&#45; Select &#45;&#45;</option>
+  		<option value="1">January</option>
+  		<option value="2">February</option>
+  		<option value="3">March</option>
+			<option value="4">April</option>
+  		<option value="5">May</option>
+  		<option value="6">June</option>
+			<option value="7">July</option>
+  		<option value="8">August</option>
+  		<option value="9">September</option>
+			<option value="10">October</option>
+  		<option value="11">November</option>
+  		<option value="12">December</option>
+		</select>
+		<select id="bdDay" class="selectpicker col-xs-2">
+			<option value="">&#45;&#45; Select &#45;&#45;</option>
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+			<option value="4">4</option>
+  		<option value="5">5</option>
+  		<option value="6">6</option>
+			<option value="7">7</option>
+  		<option value="8">8</option>
+  		<option value="9">9</option>
+			<option value="10">10</option>
+  		<option value="11">11</option>
+  		<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<!-- <option value="30" id="30">30</option>
+			<option value="31" id="31">31</option> -->
+		</select>
+		</div>
+	</div>
+	<!-- <button type="submit" id="submit" class="col-xs-4 col-xs-offset-4 btn btn-default">Submit</button> -->
+	<input type="button" value="Submit" id="submit" class="col-sm-4 col-sm-offset-4"/>
+
+	<img class="col-sm-2 col-sm-offset-5" id="zodiacImg" src=""/>
+	<h1 class="col-sm-8 col-sm-offset-2 text-center"id="zodiacName"></h1>
+	<div class="col-sm-6 col-sm-offset-3 text-center" id="zodiacInfo"></div>
+	<img id="constLeft" class="animated fadeIn fadeOut" src=""/>
+	<img id="constRight" src=""/>
+
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+	<script src="js/starfield.js"></script>
+</body>
+</html>

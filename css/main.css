@@ -1,0 +1,151 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#zodiacImg, #zodiacName, #zodiacInfo {
+  color:white;
+}
+input, button, submit, .btn, .btn-default {
+  padding:8px 0;
+  border-color:white;
+  border-width: 1px 2px 2px;
+  box-shadow:none;
+  text-shadow:none;
+  color:white;
+  background:none;
+  border-top-left-radius:0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+  text-transform:uppercase;
+  font-size:16px;
+  outline:none;
+}
+input:focus, input:active {
+  outline:none;
+}
+p{
+  font-size: 25px;
+  margin:25px 0 25px;
+  color:white;
+  display:block;
+  width:100%;
+  font-family: 'Quicksand', sans-serif;
+}
+canvas {
+  z-index: -5;
+  top:0;
+  margin-top:0;
+}
+select {
+  padding: 10px 0;
+  background:none;
+  color:white;
+  border-color:white;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  font-size:16px;
+}
+#bdMonth{
+  border-top-left-radius: 5px;
+  border-width:2px 1px 1px 2px;
+}
+#bdDay{
+  border-top-right-radius: 5px;
+  border-width:2px 2px 1px 1px;
+}
+option{
+  border:white;
+  border-width: 1px;
+  background-color: black;
+  color:white;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+}
+#zodiacImg {
+  margin-top: 40px;
+}
+#zodiacName{
+  font-size:70px;
+  font-family: 'Bad Script', cursive;
+  margin-top:0;
+}
+#zodiacInfo {
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+  z-index:5;
+}
+#constLeft, #constRight {
+  width: 360px;
+  height: auto;
+  margin-top:50px;
+  -webkit-animation: rotation 40s linear infinite;
+  -moz-animation: rotation 40s linear infinite;
+  -ms-animation: rotation 40s linear infinite;
+}
+/*#constLeft:hover, #constRight:hover {
+
+}*/
+@-webkit-keyframes rotation {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes rotation {
+    0%   { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); }
+}
+@-ms-keyframes rotation {
+    0%   { -ms-transform: rotate(0deg); }
+    100% { -ms-transform: rotate(360deg); }
+}
+#constLeft {
+  position: fixed;
+  top:15%;
+  left:5%;
+}
+#constRight {
+  top:15%;
+  right:5%;
+}
+
+@media (max-width:720px) {
+  #zodiacImg {
+    width:80%;
+    height:auto;
+    margin: 10px 10% 0;
+  }
+  #constLeft, #constRight {
+    display:block;
+    position: relative;
+    width:100%;
+    height:auto;
+    top:0;
+    left:0;
+    right:0;
+    margin-top:5px;
+  }
+  body{
+    overflow-y:scroll;
+  }
+  #bdMonth, #bdDay, input, .btn, .btn-default {
+    display:block;
+    width:80%;
+    margin: 0 10%;
+  }
+  #bdMonth{
+    border-top-right-radius: 5px;
+  }
+  #bdDay {
+    border-radius:0;
+  }
+}
+@media (max-height:700px){
+  body{
+    overflow-y:scroll;
+  }
+}
