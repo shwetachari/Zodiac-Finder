@@ -29,7 +29,6 @@ Aquarius by Tatiana from the Noun Project
  -->
 <html>
 <head>
-		<!-- <link rel="stylesheet" href="css/datepicker.css"> -->
 		<!-- BOOTSTRAP Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<!-- BOOTSTRAP Optional theme -->
@@ -43,13 +42,10 @@ Aquarius by Tatiana from the Noun Project
 </head>
 <body onload="start()" onresize="resize()" onorientationchange="resize()">
 	<canvas id="starfield"></canvas>
-	<!-- <p>When is your birthday?<input type="text" class="DateTextBox NoYear" id="datepicker"></p> -->
 	<div>
 		<p class="col-sm-12 text-center">
 			When is your birthday?
 		</p>
-		<!-- <input type="text" placeholder="Month" id="bdMonth"/>
-		<input type="text" placeholder="Day" id="bdDay" /> -->
 		<div class="choice">
 		<select id="bdMonth" class="selectpicker col-xs-2 col-xs-offset-4">
 			<option value="">&#45;&#45; Select &#45;&#45;</option>
@@ -97,8 +93,7 @@ Aquarius by Tatiana from the Noun Project
 			<option value="27">27</option>
 			<option value="28">28</option>
 			<option value="29">29</option>
-			<!-- <option value="30" id="30">30</option>
-			<option value="31" id="31">31</option> -->
+			<!-- options 30 and 31 are appended based on selected month in main.js -->
 		</select>
 		</div>
 	</div>

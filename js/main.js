@@ -1,10 +1,4 @@
-// $('#datepicker').datepicker( {
-//   changeMonth: true,
-//   changeYear: false,
-//   dateFormat: "mm/dd",
-// });
-
-
+// zodiac array [0,1,2,3,4,5,6,7,8,9,10,11]
 var objZodiac = [
   {name: "Aquarius",
   dates: "01/20 - 02/18",
@@ -117,10 +111,16 @@ var objZodiac = [
   },
 ]
 
-// up from 29 to 31
+// to 31 days, will be false if number of days is already 31
 var to31 = true
-// up from 29 to 30
+// to 30 days, will be false if number of days is already 30
 var to30 = true
+// Boolean values by condition (to control append function when changing from one month to another):
+// Month with 29 days: to31=true, to30=true
+// Month with 30 days: to31=true, to30=false
+// Month with 31 days: to31=false to30=true
+
+// upon change of the day value, hide/fade the zodiac information
 $("#bdDay").change(function(){
     $('#constLeft').fadeOut("slow", function(){})
     $('#constRight').fadeOut("slow", function(){})
@@ -128,6 +128,7 @@ $("#bdDay").change(function(){
     $('#zodiacName').fadeOut()
     $('#zodiacInfo').fadeOut()
   })
+  // upon change of the day value, hide/fade the zodiac information
 $("#bdMonth").change(function(){
     $('#constLeft').fadeOut("slow", function(){})
     $('#constRight').fadeOut("slow", function(){})
@@ -135,9 +136,10 @@ $("#bdMonth").change(function(){
     $('#zodiacName').fadeOut()
     $('#zodiacInfo').fadeOut()
   var bdMonth = document.getElementById("bdMonth").value
-// if month has 31 days (29-31, 30-31, 31-31)
+// if selected month has 31 days (29-31, 30-31, 31-31)
   if (bdMonth == 1 || bdMonth == 3 || bdMonth == 5 || bdMonth == 7 || bdMonth == 8 || bdMonth == 10 || bdMonth == 12) {
     // from 29 to 31
+    // (If previous month selected had 29 days, where to31=true and to30=true, and currently selected month has 31 days)
     if (to31 == true && to30 == true){
       var daysList = document.getElementById("bdDay");
       var thirty = document.createElement('option');
@@ -151,7 +153,8 @@ $("#bdMonth").change(function(){
       to31 = false;
       to30 = true;
     }
-    // from 30 to 31
+    // from 30 days to 31 days
+    // (If previous month selected had 30, where to31=true and to30=false, days and currently selected month has 31 days)
     else if (to31 == true && to30 == false) {
       var daysList = document.getElementById("bdDay");
       var thirtyOne = document.createElement('option');
@@ -161,15 +164,18 @@ $("#bdMonth").change(function(){
       to31 = false;
       to30 = true;
     }
+    // from 31 days to 31 days
+    // (If previous month selected had 31 days, where to31=false and to30=true, and currently selected month has 31 days)
     else {
       to31 = false;
       to30 = true;
     }
   }
 
-// if month has 30 days (29-30, 31-30, 30-30)
+// if selected month has 30 days (29-30, 31-30, 30-30)
   if (bdMonth == 4 || bdMonth == 6 || bdMonth == 9 || bdMonth == 11) {
-    // from 29 to 30
+    // from 29 days to 30 days
+    // (If previous month selected had 29 days, where to31=true and to30=true, and currently selected month has 30 days)
     if (to31 == true && to30 == true){
       var daysList = document.getElementById("bdDay");
       var thirty = document.createElement('option');
@@ -179,21 +185,25 @@ $("#bdMonth").change(function(){
       to30 = false;
       to31 = true;
     }
-    // from 31 to 30
+    // from 31 days to 30 days
+    // (If previous month selected had 29 days, where to31=false and to30=true, and currently selected month has 30 days)
     else if (to31 == false && to30 == true) {
       var daysList = document.getElementById("bdDay");
       daysList.removeChild(daysList.children[31]);
       to30 = false;
       to31 = true;
     }
+    // from 30 days to 30 days
+    // (If previous month selected had 30 days, where to31=true and to30=false, and currently selected month has 30 days)
     else{
       to30 = false;
       to31 = true;
     }
 }
-// if month has 29 days (31-29, 30-29, 29-29)
+// if selected month has 29 days (31-29, 30-29, 29-29)
   if (bdMonth == 2) {
-    // from 31 to 29
+    // from 31 days to 29 days
+    // (If previous month selected had 31 days, where to31=false and to30=true, and currently selected month has 29 days)
     if (to31 == false) {
       var daysList = document.getElementById("bdDay");
       daysList.removeChild(daysList.children[31]);
@@ -201,7 +211,8 @@ $("#bdMonth").change(function(){
       to31 = true;
       to30 = true;
     }
-    // from 30 to 29
+    // from 30 days to 29 days
+    // (If previous month selected had 30 days, where to31=true and to30=false, and currently selected month has 29 days)
     else if (to30 == false) {
       var daysList = document.getElementById("bdDay");
       daysList.removeChild(daysList.children[30]);
