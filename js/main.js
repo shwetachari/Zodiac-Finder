@@ -235,196 +235,72 @@ $("#submit").click(function(){
   if ((bdMonth == 1 && bdDay >= 20) || (bdMonth == 2 && bdDay <= 18)) {
     console.log(objZodiac[0].name);
     i = 0;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constLeft = document.getElementById("constLeft");
-    constLeft.src = objZodiac[i].constPath;
-    $(constLeft).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";
   }
   // Pisces
   if ((bdMonth == 2 && bdDay >= 19) || (bdMonth == 3 && bdDay <= 20)) {
     console.log(objZodiac[1].name)
     i = 1;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constRight = document.getElementById("constRight");
-    constRight.src = objZodiac[i].constPath;
-    $(constRight).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";
   }
   // Aries
   if ((bdMonth == 3 && bdDay >= 21) || (bdMonth == 4 && bdDay <= 19)) {
     console.log(objZodiac[2].name)
     i = 2;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constLeft = document.getElementById("constLeft");
-    constLeft.src = objZodiac[i].constPath;
-    $(constLeft).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";
   }
   // Taurus
   if ((bdMonth == 4 && bdDay >= 20) || (bdMonth == 5 && bdDay <= 20)) {
     console.log(objZodiac[3].name)
     i = 3;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constRight = document.getElementById("constRight");
-    constRight.src = objZodiac[i].constPath;
-    $(constRight).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";
   }
   // Gemini
   if ((bdMonth == 5 && bdDay >= 21) || (bdMonth == 6 && bdDay <= 20)) {
     console.log(objZodiac[4].name)
     i = 4;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constLeft = document.getElementById("constLeft");
-    constLeft.src = objZodiac[i].constPath;
-    $(constLeft).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";}
+  }
   // Cancer
   if ((bdMonth == 6 && bdDay >= 21) || (bdMonth == 7 && bdDay <= 22)) {
     console.log(objZodiac[5].name)
     i = 5;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constRight = document.getElementById("constRight");
-    constRight.src = objZodiac[i].constPath;
-    $(constRight).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";}
+  }
   // Leo
   if ((bdMonth == 7 && bdDay >= 23) || (bdMonth == 8 && bdDay <= 22)) {
     console.log(objZodiac[6].name)
     i = 6;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constLeft = document.getElementById("constLeft");
-    constLeft.src = objZodiac[i].constPath;
-    $(constLeft).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";}
+  }
   // Virgo
   if ((bdMonth == 8 && bdDay >= 23) || (bdMonth == 9 && bdDay <= 22)) {
     console.log(objZodiac[7].name)
     i = 7;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constRight = document.getElementById("constRight");
-    constRight.src = objZodiac[i].constPath;
-    $(constRight).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";}
+    }
   // Libra
   if ((bdMonth == 9 && bdDay >= 23) || (bdMonth == 10 && bdDay <= 22)) {
     console.log(objZodiac[8].name)
     i = 8;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constLeft = document.getElementById("constLeft");
-    constLeft.src = objZodiac[i].constPath;
-    $(constLeft).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";}
+    }
   // Scorpio
   if ((bdMonth == 10 && bdDay >= 23) || (bdMonth == 11 && bdDay <= 21)) {
     console.log(objZodiac[9].name)
     i = 9;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constRight = document.getElementById("constRight");
-    constRight.src = objZodiac[i].constPath;
-    $(constRight).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";}
+    }
   // Sagittarius
   if ((bdMonth == 11 && bdDay >= 22) || (bdMonth == 12 && bdDay <= 21)) {
     console.log(objZodiac[10].name)
     i = 10;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constLeft = document.getElementById("constLeft");
-    constLeft.src = objZodiac[i].constPath;
-    $(constLeft).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";}
+    }
   // Capricorn
   if ((bdMonth == 12 && bdDay >= 22) || (bdMonth == 1 && bdDay <= 19)) {
     console.log(objZodiac[11].name)
     i = 11;
-    var zodiacImg = document.getElementById("zodiacImg");
-    var zodiacName = document.getElementById("zodiacName");
-    var zodiacInfo = document.getElementById("zodiacInfo");
-    var constRight = document.getElementById("constRight");
-    constRight.src = objZodiac[i].constPath;
-    $(constRight).fadeIn("slow", function(){});
-    $('#zodiacImg').fadeIn()
-    $('#zodiacName').fadeIn()
-    $('#zodiacInfo').fadeIn()
-    zodiacImg.src = objZodiac[i].imgPath;
-    zodiacName.innerHTML = objZodiac[i].name;
-    zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";}
+    }
+  var zodiacImg = document.getElementById("zodiacImg");
+  var zodiacName = document.getElementById("zodiacName");
+  var zodiacInfo = document.getElementById("zodiacInfo");
+  var constLeft = document.getElementById("constLeft");
+  constLeft.src = objZodiac[i].constPath;
+  $(constLeft).fadeIn("slow", function(){});
+  $('#zodiacImg').fadeIn()
+  $('#zodiacName').fadeIn()
+  $('#zodiacInfo').fadeIn()
+  zodiacImg.src = objZodiac[i].imgPath;
+  zodiacName.innerHTML = objZodiac[i].name;
+  zodiacInfo.innerHTML = objZodiac[i].dates + "<br><br>" + objZodiac[i].name + " is of the element " + objZodiac[i].element + ". People born under the " + objZodiac[i].name + " star sign are compatible with " + objZodiac[i].compatible[0] + " and " + objZodiac[i].compatible[1] + ". Lucky numbers for this star sign are " + objZodiac[i].luckyNumbers + ".";
 })
