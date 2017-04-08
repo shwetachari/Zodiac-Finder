@@ -139,9 +139,12 @@ option{
   }
   #bdMonth{
     border-top-right-radius: 5px;
+    border-right-width: 2px;
   }
   #bdDay {
     border-radius:0;
+    border-top-width:1px;
+    border-left-width:2px;
   }
 }
 @media (max-height:700px){
